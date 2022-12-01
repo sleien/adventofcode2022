@@ -23,8 +23,11 @@ def main():
                 # if sum is higher than highest sum
                 if sum > highest_sum:
                     # set highest sum to sum
+                    trd_highest_sum = snd_highest_sum
+                    snd_highest_sum = highest_sum
                     highest_sum = sum
                 elif sum > snd_highest_sum:
+                    trd_highest_sum = snd_highest_sum
                     snd_highest_sum = sum
                 elif sum > trd_highest_sum:
                     trd_highest_sum = sum
