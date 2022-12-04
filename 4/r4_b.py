@@ -18,10 +18,6 @@ def main():
             line[2] = int(line[2])
             line[3] = int(line[3])
             if (line[0] >= line[2] and line[0] <= line[3]) or (line[2] >= line[0] and line[2] <= line[1]):
-                print(line[0], "-", line[1], "in", line[2], "-", line[3])
-                sum += 1
-            elif (line[0] <= line[2] and line[0] >= line[3]) or (line[2] <= line[0] and line[2] >= line[1]):
-                print(line[0], "-", line[1], "over", line[2], "-", line[3])
                 sum += 1
         print("Sum: " + str(sum))
 
