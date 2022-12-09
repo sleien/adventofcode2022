@@ -6,7 +6,7 @@ def main():
         # read all lines
         lines = f.readlines()
         # remove new line characters
-        lines = [list(line.strip()) for line in lines]
+        lines = [list(line.split(" ")) for line in lines]
 
         head = [0,0]
         tail = [0,0]
@@ -16,7 +16,7 @@ def main():
         tailVisited.append(str(tail[0]) + "," + str(tail[1]))
 
         for line in lines:
-            line[1] = int(line[2])
+            line[1] = int(line[1].strip())
             for i in range(line[1]):
                 if line[0] == "U":
                     head[0] += 1
